@@ -32,6 +32,7 @@ public class UserAccountServiceImpl implements UserAccountService {
     @Override
     public UserAccount update(long id, UserAccountDto dto) {
         Optional<UserAccount> ua = userAccountRepository.findById(id);
+
         if(ua.get() != null){
             UserAccount up = ua.get();
             up.setName(dto.getName());

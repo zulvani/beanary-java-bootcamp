@@ -17,6 +17,7 @@ public class JavaBasicApplication {
 		commands.add(new Command(0, "Exit", new Exit()));
 		commands.add(new Command(1, "Add", new Add()));
 		commands.add(new Command(2, "Substract", new Substract()));
+		commands.add(new Command(3, "Div", new Div()));
 	}
 
 	private void displayCommands(){

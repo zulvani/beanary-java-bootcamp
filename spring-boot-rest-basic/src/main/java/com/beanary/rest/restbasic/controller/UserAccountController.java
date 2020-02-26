@@ -1,5 +1,6 @@
 package com.beanary.rest.restbasic.controller;
 
+import com.beanary.rest.restbasic.auth.NeedLogin;
 import com.beanary.rest.restbasic.dto.UserAccountDto;
 import com.beanary.rest.restbasic.model.UserAccount;
 import com.beanary.rest.restbasic.service.UserAccountService;
@@ -15,9 +16,15 @@ public class UserAccountController {
     @Autowired
     UserAccountService userAccountService;
 
+    @NeedLogin
     @GetMapping
     public List<UserAccount> get() {
         return userAccountService.get();
+    }
+
+    @PostMapping
+    public UserAccount post(@RequestBody UserAccountDto dto) {
+        return userAccountService.post(dto.getEmail(), dto.getName(), dto.getPassword());
     }
 
     @GetMapping("/{id}")
@@ -35,8 +42,5 @@ public class UserAccountController {
         return userAccountService.delete(id);
     }
 
-    @PostMapping
-    public UserAccount post(@RequestBody UserAccountDto dto) {
-        return userAccountService.post(dto.getEmail(), dto.getName(), dto.getPassword());
-    }
+
 }
