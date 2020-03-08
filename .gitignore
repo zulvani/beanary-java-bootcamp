@@ -5,6 +5,7 @@ java-basic/target
 java-basic/.idea
 java-basic/java-basic.iml
 
+spring-boot-rest-basic/logs
 spring-boot-rest-basic/target
 spring-boot-rest-basic/.idea
 spring-boot-rest-basic/spring-boot-rest-basic.iml
