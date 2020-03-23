@@ -18,6 +18,7 @@ public class JavaBasicApplication {
 		commands.add(new Command(1, "Add", new Add()));
 		commands.add(new Command(2, "Substract", new Substract()));
 		commands.add(new Command(3, "Lambda", new Lambda()));
+		commands.add(new Command(4, "File Filtering", new FileFiltering()));
 	}
 
 	private void displayCommands(){
